@@ -1,0 +1,25 @@
+def get_character_data
+  character_data =
+    {
+    "ffI" => [{
+            name: "Light Warriors",
+            photo_url:"",
+            weapon: "Various"
+            }]
+    "ffVIII" => [{
+            name: "Squall Leonhart",
+            photo_url:
+            "http://vignette2.wikia.nocookie.net/finalfantasy/images/d/d2/Ff8-squall.jpg/revision/latest?cb=20100603174959",
+            weapon: "Gunblade"
+          },
+          {
+            name:"Rinoa Heartilly",
+            photo_url:
+            "",
+            weapon: "Blaster Edge"
+          }],
+
+
+  return character_data
+  }
+end
