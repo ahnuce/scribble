@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @anime.title %>
+</p>
+
+<p>
+  <strong>Episodes:</strong>
+  <%= @anime.episodes %>
+</p>
+
+<p>
+
+  <%= image_tag @anime.photo_url %>
+</p>
+
+
+<div class='comments'>
+  <h3>Comments</h3>
+  <%= link_to "Add new comment", new_anime_comment_path(@anime) %>
+  <% @comments.each do |comment| %>
+    <div>
+      <time>Updated <%= comment.updated_at %></time>
+      <p>
+	<%= comment.body %>
+      </p>
+      <%= link_to "Edit", edit_anime_comment_path(@anime, comment) %> |
+      <%= link_to "Delete", anime_comment_path(@anime, comment), method: :delete %>
+    </div>
+  <% end %>
+</div>
+
+
+
+<%= link_to 'Edit', edit_anime_path(@anime) %> |
+<%= link_to 'Back', animes_path %>
