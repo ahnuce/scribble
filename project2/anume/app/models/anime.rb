@@ -1,7 +1,7 @@
 class Anime < ApplicationRecord
-  belongs_to :User
+  belongs_to :user, optional: true
   has_many :comments
   validates_presence_of :title
-validates_presence_of :user_id
-validates_presence_of :body
+
+
 end

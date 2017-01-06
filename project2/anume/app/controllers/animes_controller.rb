@@ -26,8 +26,8 @@ class AnimesController < ApplicationController
   # POST /animes
   # POST /animes.json
   def create
-    @anime = Anime.new(anime_params)
-
+    # @anime = Anime.new(anime_params)
+    @anime = Anime.create!(anime_params.merge(user: current_user))
     respond_to do |format|
       if @anime.save
         format.html { redirect_to @anime, notice: 'Anime was successfully created.' }
